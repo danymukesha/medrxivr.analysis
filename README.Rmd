@@ -23,7 +23,7 @@ To get started, you can use the `analyze_medrxivr()` function to import data fro
 library(medrxivr.analysis)
 
 # Analyze preprint data for January 2024
-medrxivr.analysis::analyze_medrxivr(from_date = "2024-01-31", to_date = "2024-01-31")
+medrxivr.analysis::analyze_medrxivr(from_date = "2024-01-01", to_date = "2024-01-31")
 ```
 
 ## Contributing
