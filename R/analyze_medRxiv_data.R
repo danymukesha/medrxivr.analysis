@@ -9,24 +9,27 @@
 #' @return A ggplot object displaying the number of preprints in each category.
 #'
 #' @import medrxivr
-#' @import dplyr
+#' @importFrom dplyr %>%
 #' @import ggplot2
 #'
 #' @examples
 #' \dontrun{
-#' analyze_medrxivr("2024-01-01", "2024-01-31")
+#' analyze_medrxivr("2024-01-01", "2024-01-30")
 #' }
 #'
 #' @export
+
+library(dplyr)
+
 analyze_medrxivr <- function(from_date, to_date) {
   # Import the data from medRxiv API endpoint
   mx_data <- medrxivr::mx_api_content(from_date = from_date, to_date = to_date)
 
   # Create the graph
   plot <- mx_data %>%
-    dplyr::group_by(category) %>%
-    dplyr::summarise(N = n(), .groups = "keep") %>%
-    dplyr::arrange(desc(N)) %>%
+    group_by(category) %>%
+    summarise(N = n(), .groups = "keep") %>%
+    arrange(desc(N)) %>%
     ggplot2::ggplot(ggplot2::aes(y = reorder(category, N), x = N)) +
     ggplot2::geom_col(colour = "black") +
     ggplot2::ylab("Category") +

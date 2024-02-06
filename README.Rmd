@@ -11,7 +11,7 @@ output: github_document
 
 You can install `medrxivr_analysis` from GitHub using the `devtools` package:
 
-```{r}
+```{r installing medrxivr.analysis}
 devtools::install_github("danymukesha/medrxivr.analysis")
 ```
 
@@ -19,7 +19,7 @@ devtools::install_github("danymukesha/medrxivr.analysis")
 
 To get started, you can use the `analyze_medrxivr()` function to import data from the medRxiv API and create a bar plot showing the number of preprints in each category.
 
-```{r}
+```{r Analyzing preprint publications}
 library(medrxivr.analysis)
 
 # Analyze preprint data for January 2024
