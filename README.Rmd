@@ -12,7 +12,7 @@ output: github_document
 You can install `medrxivr_analysis` from GitHub using the `devtools` package:
 
 ```{r installing medrxivr.analysis}
-devtools::install_github("danymukesha/medrxivr.analysis")
+devtools::install_github("danymukesha/medrxivr.analysis", upgrade = c("never"),)
 ```
 
 ## Usage

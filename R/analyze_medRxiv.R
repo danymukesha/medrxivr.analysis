@@ -3,13 +3,14 @@
 #' This function imports data from the medRxiv API for a specific time period
 #' and creates a bar plot showing the number of preprints in each category.
 #'
+#' @name analyze_medrxivr
 #' @param from_date Start date in "YYYY-MM-DD" format.
 #' @param to_date End date in "YYYY-MM-DD" format.
 #'
 #' @return A ggplot object displaying the number of preprints in each category.
 #'
 #' @import medrxivr
-#' @importFrom dplyr %>%
+#' @import dplyr
 #' @import ggplot2
 #'
 #' @examples
