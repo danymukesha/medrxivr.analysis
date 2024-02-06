@@ -20,9 +20,10 @@
 #'
 #' @export
 
-library(dplyr)
-
 analyze_medrxivr <- function(from_date, to_date) {
+  # Load required packages
+  library(dplyr)
+
   # Import the data from medRxiv API endpoint
   mx_data <- medrxivr::mx_api_content(from_date = from_date, to_date = to_date)
 
